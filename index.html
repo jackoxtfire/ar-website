@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AR Personal Training Axel Rieger | Fitter im Alltag</title>
+    <link rel="icon" type="image/svg+xml" href="images/AR_LOGO/ar_logo_final.svg">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL,GRAD,opsz@300,0,0,24&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Header & Navigation -->
+    <header class="navbar">
+        <div class="nav-container">
+            <div class="brand">
+                <a href="#" class="logo-link">
+                    <!-- Geometric AR Logo Image -->
+                    <img src="images/AR_LOGO/ar_logo_final.svg" alt="AR Personal Training Logo" height="48" style="object-fit: contain;">
+                    <div class="brand-text">
+                        <span class="brand-name"><span class="gold-text">A</span><span class="navy-text">R</span> <span class="navy-text">Personal Training</span></span>
+                        <span class="brand-sub">Axel Rieger</span>
+                    </div>
+                </a>
+            </div>
+
+            <nav class="desktop-nav">
+                <a href="#philosophie" data-i18n="nav-philosophie">Philosophie</a>
+                <a href="#ablauf" data-i18n="nav-ablauf">Ablauf</a>
+                <a href="#kontakt" data-i18n="nav-kontakt">Kontakt</a>
+                <button class="lang-switch" id="lang-switch-btn">EN</button>
+            </nav>
+
+            <button class="mobile-menu-btn material-symbols-outlined">menu</button>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero section-padding">
+            <div class="container">
+                <div class="hero-content animate-on-scroll">
+                    <p class="eyebrow text-gold" data-i18n="hero-eyebrow">Exklusives Personal Training</p>
+                    <h1 class="headline-lg" data-i18n="hero-h1">Fitter im Alltag, ohne Stress.</h1>
+                    <p class="body-text" data-i18n="hero-p">
+                        Stabilität und Vitalität für vielbeschäftigte Menschen. Entdecken Sie ein Fitness-Konzept, das sich Ihrem Leben anpasst – nicht umgekehrt.
+                    </p>
+                    <a href="#kontakt" class="btn btn-primary" data-i18n="hero-cta">Kennenlernen vereinbaren</a>
+                </div>
+                <div class="hero-image-wrapper animate-on-scroll">
+                    <div class="hero-image bg-navy-light">
+                        <!-- Fallback to a sleek placeholder styling if image fails -->
+                        <img src="images/hero.jpg" alt="Professional fitness studio" class="hero-img">
+                        <div class="image-gradient"></div>
+                    </div>
+                    <div class="hero-accent-lines"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Philosophie Section -->
+        <section id="philosophie" class="philosophy bg-shifted section-padding">
+            <div class="container animate-on-scroll">
+                <div class="content-block">
+                    <h2 class="headline-md" data-i18n="phil-h2">Meine Philosophie</h2>
+                    <div class="divider"></div>
+                    <div class="philosophy-text">
+                        <p data-i18n="phil-p1">Fitness ist kein Ziel an sich, sondern das Fundament für ein erfülltes Leben. In meiner Arbeit mit Klienten verzichte ich auf laute Motivation und kurzfristige Trends.</p>
+                        <p class="text-highlight" data-i18n="phil-p2">Stattdessen fokussieren wir uns auf Langlebigkeit, kontrollierte Bewegungsabläufe und funktionale Stärke, die Sie im Büro, auf Reisen und im Familienalltag spüren.</p>
+                        <p data-i18n="phil-p3">Als Ihr Coach biete ich Ihnen die nötige Ruhe und Professionalität, um Ihre gesundheitlichen Ziele nachhaltig und ohne zusätzlichen Stress in Ihren Alltag zu integrieren.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Ablauf Section -->
+        <section id="ablauf" class="process section-padding">
+            <div class="container">
+                <h2 class="headline-md mb-large animate-on-scroll" data-i18n="process-h2">Der Weg zur Balance</h2>
+
+                <div class="process-grid">
+                    <!-- Card 1 -->
+                    <div class="card card-white animate-on-scroll">
+                        <span class="material-symbols-outlined card-icon">analytics</span>
+                        <div>
+                            <h3 class="headline-sm" data-i18n="phase1-h3">Status Quo</h3>
+                            <p class="body-text-sm" data-i18n="phase1-p">Eine detaillierte Analyse Ihrer aktuellen Lebenssituation und körperlichen Verfassung bildet unser Fundament.</p>
+                        </div>
+                        <span class="card-phase">Phase 01</span>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="card card-navy span-2 animate-on-scroll">
+                        <div class="card-content">
+                            <span class="material-symbols-outlined card-icon">strategy</span>
+                            <div>
+                                <h3 class="headline-sm" data-i18n="phase2-h3">Maßgeschneidert</h3>
+                                <p class="body-text-sm opacity-80" data-i18n="phase2-p">Wir entwickeln ein Programm, das keine Überforderung darstellt, sondern als Energiequelle für Ihren Tag fungiert.</p>
+                            </div>
+                            <span class="card-phase">Phase 02</span>
+                        </div>
+                        <div class="card-image-box">
+                            <img src="images/gym.JPG" alt="Home Gym" class="card-img">
+                        </div>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="card card-cream animate-on-scroll">
+                        <span class="material-symbols-outlined card-icon">all_inclusive</span>
+                        <div>
+                            <h3 class="headline-sm" data-i18n="phase3-h3">Konstanz</h3>
+                            <p class="body-text-sm" data-i18n="phase3-p">Regelmäßige Check-ins und Anpassungen garantieren, dass Sie auch bei hohem beruflichem Druck am Ball bleiben.</p>
+                        </div>
+                        <span class="card-phase">Phase 03</span>
+                    </div>
+
+                    <!-- Card 4 (Benefits) -->
+                    <div class="card card-white span-2 benefits-card animate-on-scroll">
+                        <div class="benefits-content">
+                            <h3 class="headline-sm" data-i18n="benefits-h3">Ihre Benefits</h3>
+                            <ul class="benefits-list">
+                                <li><span class="material-symbols-outlined icon-small">check_circle</span> <span data-i18n="benefit1">Gesteigerte Konzentrationsfähigkeit</span></li>
+                                <li><span class="material-symbols-outlined icon-small">check_circle</span> <span data-i18n="benefit2">Reduktion von stressbedingten Verspannungen</span></li>
+                                <li><span class="material-symbols-outlined icon-small">check_circle</span> <span data-i18n="benefit3">Souveräne Ausstrahlung durch bessere Haltung</span></li>
+                            </ul>
+                        </div>
+
+                        <!-- Progress Arc graphic -->
+                        <div class="progress-arc hidden-mobile">
+                            <svg class="arc-svg">
+                                <circle cx="60" cy="60" r="54" class="arc-bg"></circle>
+                                <circle cx="60" cy="60" r="54" class="arc-fg"></circle>
+                            </svg>
+                            <div class="arc-text">
+                                <span class="arc-number">85%</span>
+                                <span class="arc-label" data-i18n="arc-label">Fokus</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Kontakt Section -->
+        <section id="kontakt" class="contact section-padding">
+            <div class="container">
+                <div class="contact-card bg-shifted animate-on-scroll">
+                    <div class="contact-form-wrapper">
+                        <h2 class="headline-md" data-i18n="contact-h2">Lassen Sie uns starten.</h2>
+                        <p class="body-text mb-medium" data-i18n="contact-p">Fragen Sie ein unverbindliches Erstgespräch an. Ich melde mich innerhalb von 24 Stunden bei Ihnen.</p>
+
+                        <form id="contact-form" class="booking-form" name="contact" method="POST" action="/success.html" data-netlify="true">
+                            <input type="hidden" name="form-name" value="contact">
+                            <div class="input-group">
+                                <input type="text" name="name" data-i18n-placeholder="placeholder-name" placeholder="Ihr Name" required>
+                            </div>
+                            <div class="input-group">
+                                <input type="email" name="email" data-i18n-placeholder="placeholder-email" placeholder="E-Mail Adresse" required>
+                            </div>
+                            <div class="input-group">
+                                <input type="tel" name="phone" data-i18n-placeholder="placeholder-phone" placeholder="Telefonnummer" required>
+                            </div>
+                            <div class="input-group">
+                                <textarea name="message" data-i18n-placeholder="placeholder-message" placeholder="Wie kann ich Ihnen helfen?" rows="3" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-navy w-full mt-small" data-i18n="submit-btn">Anfrage senden</button>
+                        </form>
+                        <div id="form-success" class="form-success" style="display:none;">
+                            <span class="material-symbols-outlined text-gold" style="font-size:2.5rem;">check_circle</span>
+                            <p class="headline-sm" data-i18n="form-success-title">Vielen Dank!</p>
+                            <p class="body-text" data-i18n="form-success-text">Ihre Anfrage wurde gesendet. Ich melde mich innerhalb von 24 Stunden bei Ihnen.</p>
+                        </div>
+
+                        <div class="contact-info mt-large">
+                            <div class="info-item">
+                                <span class="material-symbols-outlined text-gold">mail</span>
+                                <a id="contact-email-link" href="#" style="color:inherit;text-decoration:none;"></a>
+                            </div>
+                            <div class="info-item">
+                                <span class="material-symbols-outlined text-gold">phone</span>
+                                0676 318 65 59
+                            </div>
+                            <div class="info-item">
+                                <span class="material-symbols-outlined text-gold">location_on</span>
+                                <span data-i18n="contact-location">Wien, Österreich</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact-image hidden-mobile">
+                        <img src="images/contact.JPG" alt="Quality Gym Equipment">
+                        <div class="image-overlay"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <div class="brand-text">
+                    <span class="brand-name"><span class="gold-text">A</span><span class="navy-text">R</span> <span class="navy-text">Personal Training</span></span>
+                    <span class="brand-sub">Axel Rieger</span>
+                </div>
+                <p class="copyright">© AR Personal Training Axel Rieger</p>
+            </div>
+            <div class="footer-links">
+                <button id="open-impressum" class="footer-link" data-i18n="footer-impressum">Impressum</button>
+                <button id="open-datenschutz" class="footer-link" data-i18n="footer-datenschutz">Datenschutz</button>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Impressum Modal -->
+    <div id="impressum-modal" class="modal">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <button class="modal-close material-symbols-outlined">close</button>
+            <h2 class="headline-sm mb-small" data-i18n="impressum-title">Impressum</h2>
+            <div class="modal-body">
+                <p data-i18n="impressum-intro">Informationspflicht laut §5 E-Commerce Gesetz, §14 Unternehmensgesetzbuch, §63 Gewerbeordnung und Offenlegungspflicht laut §25 Mediengesetz.</p>
+
+                <p><strong>Axel Emanuel Rieger</strong><br>
+                AR Personal Training<br>
+                St.-Nikolaus-Platz 7<br>
+                1030 Wien<br>
+                <span data-i18n="impressum-country">Österreich</span></p>
+
+                <p><strong>Tel.:</strong> 0676 318 65 59<br>
+                <strong>E-Mail:</strong> <a href="mailto:office@ar-personal-training.at">office@ar-personal-training.at</a></p>
+
+                <p><strong data-i18n="impressum-job-label">Berufsbezeichnung:</strong> <span data-i18n="impressum-job">Fitnesstrainer</span><br>
+                <strong>Gewerbewortlaut:</strong> Erstellung von Trainingskonzepten für gesundheitsbewusste Personen<br>
+                <strong data-i18n="impressum-authority-label">Aufsichtsbehörde/Gewerbebehörde:</strong> Magistratisches Bezirksamt des III. Bezirkes (MBA 3)<br>
+                <strong>GISA-Zahl:</strong> 29338177<br>
+                <strong>Mitglied bei:</strong> Wirtschaftskammer Wien<br>
+                <strong>Gewerbeberechtigung seit:</strong> 1. März 2017<br>
+                <strong data-i18n="impressum-state-label">Verleihungsstaat:</strong> <span data-i18n="impressum-country2">Österreich</span></p>
+
+                <h3 class="legal-heading mt-medium" data-i18n="impressum-eu-heading">EU-Streitschlichtung:</h3>
+                <p data-i18n="impressum-eu-text">Verbraucher haben die Möglichkeit, Beschwerden an die Online-Streitbeilegungsplattform der EU zu richten: <a href="http://ec.europa.eu/odr" target="_blank" rel="noopener noreferrer">http://ec.europa.eu/odr</a>. Sie können allfällige Beschwerden auch an die oben angegebene E-Mail-Adresse richten.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Datenschutz Modal -->
+    <div id="datenschutz-modal" class="modal">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <button class="modal-close material-symbols-outlined">close</button>
+            <h2 class="headline-sm mb-small">Datenschutzerklärung</h2>
+            <div class="modal-body">
+
+                <h3 class="legal-heading">1. Verantwortlicher</h3>
+                <p>Axel Emanuel Rieger<br>
+                AR Personal Training<br>
+                St.-Nikolaus-Platz 7<br>
+                1030 Wien, Österreich<br>
+                E-Mail: <a href="mailto:office@ar-personal-training.at">office@ar-personal-training.at</a><br>
+                Tel.: 0676 318 65 59</p>
+
+                <h3 class="legal-heading mt-medium">2. Erhebung und Verarbeitung personenbezogener Daten</h3>
+                <p>Wir erheben personenbezogene Daten nur, soweit dies zur Erbringung unserer Leistungen erforderlich ist.</p>
+                <p><strong>Kontaktformular:</strong> Wenn Sie das Kontaktformular auf unserer Website nutzen, werden folgende Daten erhoben: Name, E-Mail-Adresse, Telefonnummer sowie Ihre Nachricht. Diese Daten werden ausschließlich zur Bearbeitung Ihrer Anfrage verwendet.</p>
+                <p><strong>Server-Logfiles:</strong> Beim Besuch unserer Website werden automatisch technische Daten (IP-Adresse, Browsertyp, Datum und Uhrzeit des Zugriffs) durch unseren Hosting-Anbieter Netlify erhoben. Diese Daten dienen der technischen Bereitstellung der Website und werden nicht zur Identifikation einzelner Personen genutzt.</p>
+
+                <h3 class="legal-heading mt-medium">3. Rechtsgrundlage</h3>
+                <p>Die Verarbeitung Ihrer Kontaktdaten erfolgt auf Grundlage von Art. 6 Abs. 1 lit. b DSGVO (Durchführung vorvertraglicher Maßnahmen) sowie Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an der Beantwortung von Anfragen).</p>
+
+                <h3 class="legal-heading mt-medium">4. Speicherdauer</h3>
+                <p>Ihre Daten werden nur so lange gespeichert, wie es zur Bearbeitung Ihrer Anfrage erforderlich ist. Nach abschließender Bearbeitung werden die Daten gelöscht, sofern keine gesetzlichen Aufbewahrungspflichten entgegenstehen.</p>
+
+                <h3 class="legal-heading mt-medium">5. Weitergabe an Dritte</h3>
+                <p><strong>Netlify Inc.</strong> (44 Montgomery Street, Suite 300, San Francisco, CA 94104, USA): Unsere Website wird über Netlify gehostet. Netlify verarbeitet Formulardaten in unserem Auftrag. Es besteht ein Auftragsverarbeitungsvertrag gemäß Art. 28 DSGVO. Weitere Informationen: <a href="https://www.netlify.com/privacy/" target="_blank" rel="noopener noreferrer">netlify.com/privacy</a>.</p>
+                <p><strong>Google LLC</strong> (1600 Amphitheatre Parkway, Mountain View, CA 94043, USA): Diese Website verwendet Google Fonts zur Darstellung von Schriftarten. Beim Laden der Seite wird eine Verbindung zu Google-Servern hergestellt, wobei Ihre IP-Adresse übertragen werden kann. Weitere Informationen: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">policies.google.com/privacy</a>.</p>
+
+                <h3 class="legal-heading mt-medium">6. Cookies &amp; lokale Speicherung</h3>
+                <p>Diese Website verwendet keine Tracking-Cookies und kein Analyse-Tool. Lediglich Ihre Spracheinstellung (Deutsch/Englisch) wird im lokalen Speicher Ihres Browsers (localStorage) gespeichert. Diese Information verlässt Ihr Gerät nicht und wird nicht an uns übertragen.</p>
+
+                <h3 class="legal-heading mt-medium">7. Ihre Rechte</h3>
+                <p>Gemäß DSGVO haben Sie folgende Rechte gegenüber uns als Verantwortlichem:</p>
+                <p>
+                    <strong>Auskunft</strong> (Art. 15 DSGVO) · <strong>Berichtigung</strong> (Art. 16 DSGVO) · <strong>Löschung</strong> (Art. 17 DSGVO) · <strong>Einschränkung der Verarbeitung</strong> (Art. 18 DSGVO) · <strong>Datenübertragbarkeit</strong> (Art. 20 DSGVO) · <strong>Widerspruch</strong> (Art. 21 DSGVO)
+                </p>
+                <p>Zur Ausübung Ihrer Rechte wenden Sie sich bitte per E-Mail an: <a href="mailto:office@ar-personal-training.at">office@ar-personal-training.at</a></p>
+
+                <h3 class="legal-heading mt-medium">8. Beschwerderecht</h3>
+                <p>Sie haben das Recht, sich bei der österreichischen Datenschutzbehörde zu beschweren:<br>
+                Österreichische Datenschutzbehörde<br>
+                Barichgasse 40–42, 1030 Wien<br>
+                <a href="mailto:dsb@dsb.gv.at">dsb@dsb.gv.at</a> · <a href="https://www.dsb.gv.at" target="_blank" rel="noopener noreferrer">www.dsb.gv.at</a></p>
+
+                <p class="mt-medium" style="font-size:0.75rem;opacity:0.5;">Stand: März 2026</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile Sticky CTA -->
+    <div class="mobile-cta-wrapper">
+        <a href="tel:06763186559" class="mobile-cta-btn">
+            <span class="material-symbols-outlined">phone</span>
+            <span data-i18n="mobile-cta">Jetzt Anrufen: 0676 318 65 59</span>
+        </a>
+    </div>
+
+    <!-- Mobile Nav Drawer -->
+    <div id="mobile-nav" class="mobile-nav">
+        <div class="mobile-nav-overlay"></div>
+        <div class="mobile-nav-drawer">
+            <button class="mobile-nav-close material-symbols-outlined">close</button>
+            <nav class="mobile-nav-links">
+                <a href="#philosophie" class="mobile-nav-link" data-i18n="nav-philosophie">Philosophie</a>
+                <a href="#ablauf" class="mobile-nav-link" data-i18n="nav-ablauf">Ablauf</a>
+                <a href="#kontakt" class="mobile-nav-link" data-i18n="nav-kontakt">Kontakt</a>
+                <button class="mobile-nav-link mobile-nav-impressum-btn" data-i18n="footer-impressum">Impressum</button>
+            </nav>
+            <div class="mobile-nav-footer">
+                <button class="lang-switch" id="mobile-lang-switch-btn">EN</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

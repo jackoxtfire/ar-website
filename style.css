@@ -808,7 +808,7 @@ body {
 
 /* Form Success Message */
 .form-success {
-  display: flex;
+  display: none;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -957,4 +957,46 @@ body {
 #copy-toast.show {
   opacity: 1;
   transform: translateX(-50%) translateY(0);
+}
+
+/* Inline-style replacements (CSP compliance) */
+.honeypot-field {
+  position: absolute;
+  left: -9999px;
+  top: auto;
+}
+.logo-img {
+  object-fit: contain;
+}
+#contact-email-link {
+  color: inherit;
+  text-decoration: none;
+}
+.icon-lg {
+  font-size: 2.5rem;
+}
+.icon-xl {
+  font-size: 4rem;
+}
+.legal-note {
+  font-size: 0.75rem;
+  opacity: 0.5;
+}
+
+/* Success page */
+.success-hero {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+}
+.success-content {
+  text-align: center;
+  max-width: 600px;
+}
+.success-content .headline-md {
+  margin-top: 1.5rem;
+}
+.success-content .body-text {
+  margin: 1.5rem auto;
+  max-width: 45ch;
 }

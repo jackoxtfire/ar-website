@@ -261,6 +261,10 @@ body {
   align-items: center;
 }
 
+.brand {
+  min-width: 0;
+}
+
 .logo-link {
   display: flex;
   align-items: center;
@@ -283,6 +287,12 @@ body {
   color: var(--gold);
   font-size: 0.875rem;
   font-weight: 500;
+}
+@media (max-width: 768px) {
+  .logo-link { gap: 0.5rem; }
+  .logo-img { height: 36px; }
+  .brand-name { font-size: 0.875rem; }
+  .brand-sub { font-size: 0.75rem; }
 }
 
 .desktop-nav {
@@ -323,30 +333,34 @@ body {
 }
 .lang-switch:hover { transform: scale(1.05); }
 
-.mobile-menu-btn {
+.mobile-nav-actions {
   display: none;
+}
+@media (max-width: 768px) {
+  .mobile-nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+}
+
+.mobile-menu-btn {
   background: none;
   border: none;
   color: var(--navy);
   font-size: 1.5rem;
   cursor: pointer;
-}
-@media (max-width: 768px) {
-  .mobile-menu-btn { display: block; }
+  display: flex;
+  align-items: center;
 }
 
 .mobile-header-lang {
-  display: none;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
 }
-@media (max-width: 768px) {
-  .mobile-header-lang {
-    display: flex;
-    align-items: center;
-    gap: 0.25rem;
-  }
-  .mobile-header-lang .material-symbols-outlined {
-    font-size: 1rem;
-  }
+.mobile-header-lang .material-symbols-outlined {
+  font-size: 1rem;
 }
 
 /* Hero Section */

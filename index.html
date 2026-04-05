@@ -3,7 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AR Personal Training Axel Rieger | Fitter im Alltag</title>
+    <title>Personal Training Wien | Axel Rieger – AR Personal Training</title>
+    <meta name="description" content="Exklusives Personal Training in Wien mit Axel Rieger. Individuell, stressfrei und nachhaltig – für mehr Fitness im Alltag. Jetzt kostenloses Erstgespräch anfragen.">
+    <link rel="canonical" href="https://ar-personal-training.at/">
+    <link rel="alternate" hreflang="de" href="https://ar-personal-training.at/">
+    <link rel="alternate" hreflang="en" href="https://ar-personal-training.at/">
+    <link rel="alternate" hreflang="x-default" href="https://ar-personal-training.at/">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Personal Training Wien | Axel Rieger – AR Personal Training">
+    <meta property="og:description" content="Exklusives Personal Training in Wien mit Axel Rieger. Individuell, stressfrei und nachhaltig – für mehr Fitness im Alltag.">
+    <meta property="og:url" content="https://ar-personal-training.at/">
+    <meta property="og:image" content="https://ar-personal-training.at/images/hero.jpg">
+    <meta property="og:locale" content="de_AT">
+    <meta property="og:locale:alternate" content="en">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Personal Training Wien | Axel Rieger – AR Personal Training">
+    <meta name="twitter:description" content="Exklusives Personal Training in Wien mit Axel Rieger. Individuell, stressfrei und nachhaltig.">
+    <meta name="twitter:image" content="https://ar-personal-training.at/images/hero.jpg">
+
     <link rel="icon" type="image/svg+xml" href="images/AR_LOGO/ar_logo_final.svg">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -30,8 +51,10 @@
                 <button class="lang-switch desktop-lang" id="lang-switch-btn"><span class="material-symbols-outlined">language</span><span class="lang-label">EN</span></button>
             </nav>
 
-            <button class="lang-switch mobile-header-lang" id="mobile-header-lang-btn"><span class="material-symbols-outlined">language</span><span class="lang-label">EN</span></button>
-            <button class="mobile-menu-btn material-symbols-outlined">menu</button>
+            <div class="mobile-nav-actions">
+                <button class="lang-switch mobile-header-lang" id="mobile-header-lang-btn"><span class="material-symbols-outlined">language</span><span class="lang-label">EN</span></button>
+                <button class="mobile-menu-btn material-symbols-outlined">menu</button>
+            </div>
         </div>
     </header>
 
@@ -50,7 +73,7 @@
                 <div class="hero-image-wrapper animate-on-scroll">
                     <div class="hero-image bg-navy-light">
                         <!-- Fallback to a sleek placeholder styling if image fails -->
-                        <img src="images/hero.jpg" alt="Professional fitness studio" class="hero-img">
+                        <img src="images/hero.jpg" alt="Axel Rieger Personal Trainer Wien" class="hero-img" width="800" height="1315">
                         <div class="image-gradient"></div>
                     </div>
                     <div class="hero-accent-lines"></div>
@@ -100,7 +123,7 @@
                             <span class="card-phase">Phase 02</span>
                         </div>
                         <div class="card-image-box">
-                            <img src="images/gym.JPG" alt="Home Gym" class="card-img">
+                            <img src="images/gym.JPG" alt="Personal Training Studio Wien" class="card-img" width="800" height="1200" loading="lazy">
                         </div>
                     </div>
 
@@ -188,7 +211,7 @@
                         </div>
                     </div>
                     <div class="contact-image hidden-mobile">
-                        <img src="images/contact.JPG" alt="Quality Gym Equipment">
+                        <img src="images/contact.JPG" alt="Personal Training Beratung Wien" width="800" height="1200" loading="lazy">
                         <div class="image-overlay"></div>
                     </div>
                 </div>
@@ -323,5 +346,35 @@
 
     <div id="copy-toast" aria-live="polite"></div>
     <script src="script.js"></script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "AR Personal Training",
+      "description": "Exklusives Personal Training in Wien mit Axel Rieger. Individuell, stressfrei und nachhaltig.",
+      "url": "https://ar-personal-training.at",
+      "telephone": "+436763186559",
+      "email": "office@ar-personal-training.at",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "St.-Nikolaus-Platz 7",
+        "addressLocality": "Wien",
+        "postalCode": "1030",
+        "addressCountry": "AT"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 48.197,
+        "longitude": 16.389
+      },
+      "priceRange": "$$",
+      "image": "https://ar-personal-training.at/images/hero.jpg",
+      "founder": {
+        "@type": "Person",
+        "name": "Axel Rieger"
+      },
+      "serviceType": "Personal Training"
+    }
+    </script>
 </body>
 </html> 

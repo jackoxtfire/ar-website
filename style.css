@@ -1,7 +1,74 @@
-/* 
+/*
   AR Personal Training - The Curated Equilibrium
   Design System Tokens & Global Styles
 */
+
+/* Self-hosted fonts */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url('fonts/Inter-300.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/Inter-400.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('fonts/Inter-500.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('fonts/Inter-600.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('fonts/SpaceGrotesk-500.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('fonts/SpaceGrotesk-700.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Material Symbols Outlined';
+  font-style: normal;
+  font-weight: 100 700;
+  font-display: block;
+  src: url('fonts/MaterialSymbolsOutlined.ttf') format('truetype');
+}
+.material-symbols-outlined {
+  font-family: 'Material Symbols Outlined';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  direction: ltr;
+  -webkit-font-feature-settings: 'liga';
+  font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+  font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+}
 
 :root {
   /* Color Palette */
@@ -247,6 +314,12 @@ body {
   font-size: 0.875rem;
   cursor: pointer;
   transition: transform 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+.lang-switch .material-symbols-outlined {
+  font-size: 1rem;
 }
 .lang-switch:hover { transform: scale(1.05); }
 
@@ -260,6 +333,20 @@ body {
 }
 @media (max-width: 768px) {
   .mobile-menu-btn { display: block; }
+}
+
+.mobile-header-lang {
+  display: none;
+}
+@media (max-width: 768px) {
+  .mobile-header-lang {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+  }
+  .mobile-header-lang .material-symbols-outlined {
+    font-size: 1rem;
+  }
 }
 
 /* Hero Section */
@@ -848,4 +935,26 @@ body {
 }
 .mobile-cta-btn:active {
   background-color: var(--dark-grey); /* Slightly darker on tap */
+}
+
+/* Copy-to-clipboard toast */
+#copy-toast {
+  position: fixed;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%) translateY(1rem);
+  background: var(--navy);
+  color: #fff;
+  font-size: 0.8rem;
+  font-weight: 500;
+  padding: 0.5rem 1.25rem;
+  border-radius: 2rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  z-index: 9999;
+}
+#copy-toast.show {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
 }

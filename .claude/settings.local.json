@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(\"C:/Users/marcu/Documents/GitHub/ar-website/style.css\":*)"
+    ]
+  }
+}

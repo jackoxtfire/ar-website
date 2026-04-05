@@ -6,8 +6,6 @@
     <title>AR Personal Training Axel Rieger | Fitter im Alltag</title>
     <link rel="icon" type="image/svg+xml" href="images/AR_LOGO/ar_logo_final.svg">
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL,GRAD,opsz@300,0,0,24&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -29,9 +27,10 @@
                 <a href="#philosophie" data-i18n="nav-philosophie">Philosophie</a>
                 <a href="#ablauf" data-i18n="nav-ablauf">Ablauf</a>
                 <a href="#kontakt" data-i18n="nav-kontakt">Kontakt</a>
-                <button class="lang-switch" id="lang-switch-btn">EN</button>
+                <button class="lang-switch desktop-lang" id="lang-switch-btn"><span class="material-symbols-outlined">language</span><span class="lang-label">EN</span></button>
             </nav>
 
+            <button class="lang-switch mobile-header-lang" id="mobile-header-lang-btn"><span class="material-symbols-outlined">language</span><span class="lang-label">EN</span></button>
             <button class="mobile-menu-btn material-symbols-outlined">menu</button>
         </div>
     </header>
@@ -150,8 +149,9 @@
                         <h2 class="headline-md" data-i18n="contact-h2">Lassen Sie uns starten.</h2>
                         <p class="body-text mb-medium" data-i18n="contact-p">Fragen Sie ein unverbindliches Erstgespräch an. Ich melde mich innerhalb von 24 Stunden bei Ihnen.</p>
 
-                        <form id="contact-form" class="booking-form" name="contact" method="POST" action="/success.html" data-netlify="true">
+                        <form id="contact-form" class="booking-form" name="contact" method="POST" action="/success.html" data-netlify="true" data-netlify-honeypot="bot-field">
                             <input type="hidden" name="form-name" value="contact">
+                            <p style="display:none;"><label>Don't fill this out: <input name="bot-field"></label></p>
                             <div class="input-group">
                                 <input type="text" name="name" data-i18n-placeholder="placeholder-name" placeholder="Ihr Name" required>
                             </div>
@@ -179,7 +179,7 @@
                             </div>
                             <div class="info-item">
                                 <span class="material-symbols-outlined text-gold">phone</span>
-                                0676 318 65 59
+                                <span id="contact-phone"></span>
                             </div>
                             <div class="info-item">
                                 <span class="material-symbols-outlined text-gold">location_on</span>
@@ -227,8 +227,8 @@
                 1030 Wien<br>
                 <span data-i18n="impressum-country">Österreich</span></p>
 
-                <p><strong>Tel.:</strong> 0676 318 65 59<br>
-                <strong>E-Mail:</strong> <a href="mailto:office@ar-personal-training.at">office@ar-personal-training.at</a></p>
+                <p><strong>Tel.:</strong> <span id="impressum-phone"></span><br>
+                <strong>E-Mail:</strong> <a id="impressum-email-link"></a></p>
 
                 <p><strong data-i18n="impressum-job-label">Berufsbezeichnung:</strong> <span data-i18n="impressum-job">Fitnesstrainer</span><br>
                 <strong>Gewerbewortlaut:</strong> Erstellung von Trainingskonzepten für gesundheitsbewusste Personen<br>
@@ -257,8 +257,8 @@
                 AR Personal Training<br>
                 St.-Nikolaus-Platz 7<br>
                 1030 Wien, Österreich<br>
-                E-Mail: <a href="mailto:office@ar-personal-training.at">office@ar-personal-training.at</a><br>
-                Tel.: 0676 318 65 59</p>
+                E-Mail: <a id="datenschutz-email-link-1"></a><br>
+                Tel.: <span id="datenschutz-phone"></span></p>
 
                 <h3 class="legal-heading mt-medium">2. Erhebung und Verarbeitung personenbezogener Daten</h3>
                 <p>Wir erheben personenbezogene Daten nur, soweit dies zur Erbringung unserer Leistungen erforderlich ist.</p>
@@ -283,7 +283,7 @@
                 <p>
                     <strong>Auskunft</strong> (Art. 15 DSGVO) · <strong>Berichtigung</strong> (Art. 16 DSGVO) · <strong>Löschung</strong> (Art. 17 DSGVO) · <strong>Einschränkung der Verarbeitung</strong> (Art. 18 DSGVO) · <strong>Datenübertragbarkeit</strong> (Art. 20 DSGVO) · <strong>Widerspruch</strong> (Art. 21 DSGVO)
                 </p>
-                <p>Zur Ausübung Ihrer Rechte wenden Sie sich bitte per E-Mail an: <a href="mailto:office@ar-personal-training.at">office@ar-personal-training.at</a></p>
+                <p>Zur Ausübung Ihrer Rechte wenden Sie sich bitte per E-Mail an: <a id="datenschutz-email-link-2"></a></p>
 
                 <h3 class="legal-heading mt-medium">8. Beschwerderecht</h3>
                 <p>Sie haben das Recht, sich bei der österreichischen Datenschutzbehörde zu beschweren:<br>
@@ -298,9 +298,9 @@
 
     <!-- Mobile Sticky CTA -->
     <div class="mobile-cta-wrapper">
-        <a href="tel:06763186559" class="mobile-cta-btn">
+        <a id="mobile-cta-link" class="mobile-cta-btn">
             <span class="material-symbols-outlined">phone</span>
-            <span data-i18n="mobile-cta">Jetzt Anrufen: 0676 318 65 59</span>
+            <span data-i18n="mobile-cta">Jetzt Anrufen</span>
         </a>
     </div>
 
@@ -321,6 +321,7 @@
         </div>
     </div>
 
+    <div id="copy-toast" aria-live="polite"></div>
     <script src="script.js"></script>
 </body>
 </html> 

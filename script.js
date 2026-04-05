@@ -129,7 +129,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const formData = new FormData(contactForm);
 
-            fetch('/', {
+            fetch(contactForm.action, {
                 method: 'POST',
                 body: formData
             })
@@ -151,14 +151,54 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // --- 5. Email Obfuscation --- //
-    const emailLink = document.getElementById('contact-email-link');
-    if (emailLink) {
-        const parts = ['office', 'ar-personal-training', 'at'];
-        const address = parts[0] + '@' + parts[1] + '.' + parts[2];
-        emailLink.href = 'mailto:' + address;
-        emailLink.textContent = address;
+    // --- 5. Contact Info Obfuscation --- //
+    const emailParts = ['office', 'ar-personal-training', 'at'];
+    const email = emailParts[0] + '@' + emailParts[1] + '.' + emailParts[2];
+    const phoneParts = ['0676', '318', '65', '59'];
+    const phoneDisplay = phoneParts.join(' ');
+    const phoneTel = phoneParts.join('');
+
+    const toast = document.getElementById('copy-toast');
+    let toastTimer;
+    function showToast(msg) {
+        toast.textContent = msg;
+        toast.classList.add('show');
+        clearTimeout(toastTimer);
+        toastTimer = setTimeout(() => toast.classList.remove('show'), 2000);
     }
+
+    function fillEmail(id) {
+        const el = document.getElementById(id);
+        if (!el) return;
+        el.textContent = email;
+        el.href = '#';
+        el.style.cursor = 'pointer';
+        el.addEventListener('click', (e) => {
+            e.preventDefault();
+            navigator.clipboard.writeText(email).then(() => showToast('E-Mail kopiert!'));
+        });
+    }
+    function fillPhone(id) {
+        const el = document.getElementById(id);
+        if (el) el.textContent = phoneDisplay;
+    }
+
+    // Contact section
+    fillEmail('contact-email-link');
+    fillPhone('contact-phone');
+
+    // Impressum
+    fillPhone('impressum-phone');
+    fillEmail('impressum-email-link');
+
+    // Datenschutz
+    fillPhone('datenschutz-phone');
+    fillEmail('datenschutz-email-link-1');
+    fillEmail('datenschutz-email-link-2');
+
+    // Mobile CTA
+    const mobileCta = document.getElementById('mobile-cta-link');
+    if (mobileCta) mobileCta.href = 'tel:' + phoneTel;
 
     // --- 5. Language Switch --- //
     const translations = {
@@ -225,7 +265,7 @@ document.addEventListener('DOMContentLoaded', () => {
             'form-success-text': 'Ihre Anfrage wurde gesendet. Ich melde mich innerhalb von 24 Stunden bei Ihnen.',
 
             // Mobile CTA
-            'mobile-cta': 'Jetzt Anrufen: 0676 318 65 59',
+            'mobile-cta': 'Jetzt Anrufen',
         },
         en: {
             // Navigation
@@ -290,7 +330,7 @@ document.addEventListener('DOMContentLoaded', () => {
             'form-success-text': 'Your request has been sent. I will get back to you within 24 hours.',
 
             // Mobile CTA
-            'mobile-cta': 'Call Now: 0676 318 65 59',
+            'mobile-cta': 'Call Now',
         }
     };
 
@@ -300,10 +340,16 @@ document.addEventListener('DOMContentLoaded', () => {
         const t = translations[lang];
 
         // Update text content
+        // impressum-eu-text contains an <a> tag and intentionally uses innerHTML
+        const HTML_KEYS = new Set(['impressum-eu-text']);
         document.querySelectorAll('[data-i18n]').forEach(el => {
             const key = el.getAttribute('data-i18n');
             if (t[key] !== undefined) {
-                el.innerHTML = t[key];
+                if (HTML_KEYS.has(key)) {
+                    el.innerHTML = t[key];
+                } else {
+                    el.textContent = t[key];
+                }
             }
         });
 
@@ -320,9 +366,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Update button labels (show the OTHER language)
         const btn = document.getElementById('lang-switch-btn');
-        if (btn) btn.textContent = lang === 'de' ? 'EN' : 'DE';
+        if (btn) {
+            const label = btn.querySelector('.lang-label');
+            if (label) label.textContent = lang === 'de' ? 'EN' : 'DE';
+            else btn.textContent = lang === 'de' ? 'EN' : 'DE';
+        }
         const mobileBtn = document.getElementById('mobile-lang-switch-btn');
         if (mobileBtn) mobileBtn.textContent = lang === 'de' ? 'EN' : 'DE';
+        const mobileHeaderLangBtn = document.getElementById('mobile-header-lang-btn');
+        if (mobileHeaderLangBtn) {
+            const label = mobileHeaderLangBtn.querySelector('.lang-label');
+            if (label) label.textContent = lang === 'de' ? 'EN' : 'DE';
+        }
 
         currentLang = lang;
         localStorage.setItem('ar-lang', lang);
@@ -341,6 +396,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const mobileLangBtn = document.getElementById('mobile-lang-switch-btn');
     if (mobileLangBtn) {
         mobileLangBtn.addEventListener('click', () => {
+            applyLanguage(currentLang === 'de' ? 'en' : 'de');
+        });
+    }
+    const mobileHeaderLangBtn = document.getElementById('mobile-header-lang-btn');
+    if (mobileHeaderLangBtn) {
+        mobileHeaderLangBtn.addEventListener('click', () => {
             applyLanguage(currentLang === 'de' ? 'en' : 'de');
         });
     }
